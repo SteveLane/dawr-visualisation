@@ -1,4 +1,27 @@
 html, body {
     margin: 0;
     height: 100%;
+    background-color: #F0F0F2;
 }
+
+div.bar {
+    display: inline-block;
+    width: 20px;
+    height: 75px;   /* We'll override this later */
+    background-color: teal;
+    margin-right: 2px;
+}
+
+path {
+  fill: #ccc;
+  stroke: #fff;
+  stroke-width: .5px;
+}
+
+path:hover {
+  fill: red;
+}
+
+/* path:hover { */
+/*     fill: #F78536; */
+/* } */
