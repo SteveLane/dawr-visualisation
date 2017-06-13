@@ -22,6 +22,30 @@ path:hover {
   fill: red;
 }
 
-/* path:hover { */
-/*     fill: #F78536; */
-/* } */
+/* Let's some CSS for the text panels and vis */
+#sections {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    top: 0px;
+    z-index: 90;
+}
+
+/* For the panels within sections, set the lower margin */
+.panel {
+    margin-bottom: 200px;
+}
+
+/* For the vis panel, use inline-block to set it side-by-side with sections */
+/* Also, fix it's position, so it doesn't move when scrolling. */
+#vis {
+    display: inline-block;
+    position: fixed;
+    top: 60px;
+    z-index: 1;
+    margin-left: 0;
+    /* Just to make it stand out during dev. */
+    height: 600px;
+    width: 600px;
+    background-color: #F0F0F2;
+}

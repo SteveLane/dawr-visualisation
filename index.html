@@ -1,54 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Biosecurity at large!</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+<head>
+  <meta charset="utf-8">
+  <title>Biosecurity at large!</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+  <!-- Alternatively use d3.js here -->
+  <!-- <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
+  <!-- <script src="//d3js.org/topojson.v1.min.js"></script> -->
+  <script type="text/javascript" src="js/d3.js"></script>
+  <script type="text/javascript" src="js/topojson.js"></script>
+  
+</head>
 
-    <!-- Alternatively use d3.js here -->
-    <!-- <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
-    <!-- <script src="//d3js.org/topojson.v1.min.js"></script> -->
-    <script type="text/javascript" src="js/d3.js"></script>
-    <script type="text/javascript" src="js/topojson.js"></script>
+<body>
+<div class="container">
+  <!-- Add a 'graphic' div to hold everything -->
+  <div id="graphic">
+    <!-- Sections div contains the text 'panels' -->
+    <!-- All these are style in css/style.css -->
+    <div id="sections">
+      <!-- Each 'panel' contains the textual elements I want -->
+      <section class="panel">
+	<div class="title">Title of the first panel</div>
+	Some text that the first panel contains.
+      </section>
 
-  </head>
+      <section class="panel">
+	<div class="title">Title of the second panel</div>
+	Text that the second panel contains.
+      </section>
 
-  <body>
+      <section class="panel">
+	<div class="title"> Title of the last panel</div>
+	Blah, blah, blah-de-blah.
+      </section>
+    </div>
 
-    <h1>Biosecurity at large!</h1>
+    <!-- Now we need a visualisation div to hold the graphics -->
+    <div id="vis">
+    </div>
+    
+    <!-- And possible some extra space? -->
+    <div id="extra-space">
+    </div>
+  </div>
+</div>
 
-    <p>
-      I'm testing something here, and it may or may not be appropriate!
-    </p>
+<!-- And there we have it. Now include the relevant scripts, and close off. -->
 
-    <script type="text/javascript">
-      // Your beautiful D3 code will go here
-      
-    </script>
-
-    <!-- Or here... -->
-    <script type="text/javascript" src="js/first.js"></script>
-
-    <p>
-      And before I get to the bar chart, here's an svg:
-    </p>
-
-    <svg width="500" height="75">
-      <ellipse cx="350" cy="25" rx="100" ry="25" fill="#2B4450" opacity="0.9"/>
-      <ellipse cx="250" cy="25" rx="100" ry="25" fill="#2B4450" opacity="0.9"/>
-      <ellipse cx="150" cy="25" rx="100" ry="25" fill="#2B4450" opacity="0.9"/>
-    </svg> <br>
-
-    <p>
-      And now here's a (random) barchart. Each refresh will draw a newly generated barchart.
-    </p>
-
-    <script type="text/javascript" src="js/second.js"></script>
-
-    <h2>It's now time for a map!</h2>
-
-    <script type="text/javascript" src="js/map.js"></script>
-
-  </body>
-
+  
+</body>
 </html>
