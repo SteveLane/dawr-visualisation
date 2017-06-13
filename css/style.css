@@ -1,28 +1,36 @@
-html, body {
-    margin: 0;
-    height: 100%;
-    background-color: #F0F0F2;
+/* html, body { */
+/*     margin: 0; */
+/*     height: 100%; */
+/*     background-color: #F0F0F2; */
+/* } */
+
+/* div.bar { */
+/*     display: inline-block; */
+/*     width: 20px; */
+/*     height: 75px;   /\* We'll override this later *\/ */
+/*     background-color: teal; */
+/*     margin-right: 2px; */
+/* } */
+
+/* path { */
+/*   fill: #ccc; */
+/*   stroke: #fff; */
+/*   stroke-width: .5px; */
+/* } */
+
+/* path:hover { */
+/*   fill: red; */
+/* } */
+
+/* Let's do some CSS for the text panels and vis */
+.container {
+  width: 890px;
 }
 
-div.bar {
-    display: inline-block;
-    width: 20px;
-    height: 75px;   /* We'll override this later */
-    background-color: teal;
-    margin-right: 2px;
+#graphic {
+  padding-top: 60px;
 }
 
-path {
-  fill: #ccc;
-  stroke: #fff;
-  stroke-width: .5px;
-}
-
-path:hover {
-  fill: red;
-}
-
-/* Let's some CSS for the text panels and vis */
 #sections {
     position: relative;
     display: inline-block;
@@ -34,6 +42,10 @@ path:hover {
 /* For the panels within sections, set the lower margin */
 .panel {
     margin-bottom: 200px;
+}
+
+#extra-space {
+  height: 300px;
 }
 
 /* For the vis panel, use inline-block to set it side-by-side with sections */
