@@ -16,27 +16,20 @@ var path = d3.geoPath()
 // Now draw the map
 d3.json("data/aust-topo.json", function(error, aust) {
     if (error) return console.error(error);
-    // svg.append("path")
-    // 	.datum(topojson.feature(aust, aust.objects.states))
-    // 	.attr("d", d3.geoPath().projection(null));
     var geojson = topojson.feature(aust, aust.objects.states);
 
+    // Expand to bounds
     projection
 	.scale(1)
 	.translate([0, 0]);
-
     var b = path.bounds(geojson),
 	s = .95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
 	t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
-    console.log(b)
-    console.log(s)
-    console.log(t)
-
     projection
 	.scale(s)
 	.translate(t);
-    
-    // states = geojson.features.filter(function(d) { return d.state_id !== 9; })[0];
+
+    // Draw and add mouseover events
     svg.selectAll("path")
 	.data(geojson.features)
 	.enter()
@@ -52,6 +45,8 @@ d3.json("data/aust-topo.json", function(error, aust) {
 		.style("fill", "#F78536");
 	})
 	.on("mouseout", function(d) {
+	    projection
+		.scale(s)
 	    d3.select(this)
 		.transition()
 		.duration(500)
